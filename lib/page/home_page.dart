@@ -118,66 +118,317 @@ class _HomePageState extends State<HomePage> {
               color: Color(0xFF27214D)
             ),
             ),
-            Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(Icons.favorite_border,color: Colors.orange,size: 24,),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset("Images/dishr1.png",height: 80,width: 80,fit: BoxFit.cover,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // First Product Card
+            Container(
+              width: 150,
+              padding: EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey.shade300),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 5,
+                    spreadRadius: 2,
+                    offset: Offset(2, 3),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Icon(Icons.favorite_border, color: Colors.orange, size: 24),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      "Images/dishr1.png",
+                      height: 80,
+                      width: 80,
+                      fit: BoxFit.cover,
                     ),
-                    Text("Honey lime combo",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: Colors.black),),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("N 2,000",style: TextStyle(
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    "Honey lime combo",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black),
+                  ),
+                  SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "₦ 2,000",
+                        style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                           color: Colors.orange,
-                        ),),
-                        Container(
-                          padding: EdgeInsets.all(4),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.orange.withOpacity(0.2),
-                          ),
-                        child: Icon(Icons.add,color: Colors.orange, size: 18,),),
-                      ],
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.orange.withOpacity(0.2),
+                        ),
+                        child: Icon(Icons.add, color: Colors.orange, size: 18),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            // Second Product Card
+            Container(
+              width: 150,
+              padding: EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey.shade300),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 5,
+                    spreadRadius: 2,
+                    offset: Offset(2, 3),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Icon(Icons.favorite_border, color: Colors.orange, size: 24),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      "Images/dishr2.png", // Change to second product image
+                      height: 80,
+                      width: 80,
+                      fit: BoxFit.cover,
                     ),
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(Icons.favorite_border,color: Colors.orange,size: 24,),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset("Images/dishr1.png",height: 80,width: 80,fit: BoxFit.cover,),
-                    ),
-                    Text("Honey lime combo",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: Colors.black),),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("N 2,000",style: TextStyle(
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    "Berry mango combo",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black),
+                  ),
+                  SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "₦ 8,000",
+                        style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                           color: Colors.orange,
-                        ),),
-                        Container(
-                          padding: EdgeInsets.all(4),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.orange.withOpacity(0.2),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.orange.withOpacity(0.2),
+                        ),
+                        child: Icon(Icons.add, color: Colors.orange, size: 18),
                           ),
-                          child: Icon(Icons.add,color: Colors.orange, size: 18,),),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
+            SizedBox(height: 50,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Hottest",style: TextStyle(fontWeight: FontWeight.w700,color: Color(0xFF938DB5),fontSize: 16,fontFamily: "BrandonGrostesque"),),
+                Text("Popular",style: TextStyle(fontWeight: FontWeight.w700,color: Color(0xFF938DB5),fontSize: 16,fontFamily: "BrandonGrostesque"),),
+                Text("New combo",style: TextStyle(fontWeight: FontWeight.w700,color: Color(0xFF938DB5),fontSize: 16,fontFamily: "BrandonGrostesque"),),
+                Text("Top",style: TextStyle(fontWeight: FontWeight.w700,color: Color(0xFF938DB5),fontSize: 16,fontFamily: "BrandonGrostesque"),)
+              ],
+            ),
+            SizedBox(height: 20,),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 140,
+                    height: 170,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFFFAEB),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Icon(Icons.favorite_border, color: Colors.orange, size: 24),
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            "Images/dish1.png", // Change to second product image
+                            height: 80,
+                            width: 80,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Quinoa fruit salad",
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black),
+                        ),
+                        SizedBox(height: 8),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "₦ 10,000",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.orange,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(4),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.orange.withOpacity(0.2),
+                              ),
+                              child: Icon(Icons.add, color: Colors.orange, size: 18),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 8,),
+                  Container(
+                    width: 140,
+                    height: 170,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFEF0F0),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Icon(Icons.favorite_border, color: Colors.orange, size: 24),
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            "Images/dish2.png", // Change to second product image
+                            height: 80,
+                            width: 80,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Tropical fruit salad",
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black),
+                        ),
+                        SizedBox(height: 8),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "₦ 10,000",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.orange,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(4),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.orange.withOpacity(0.2),
+                              ),
+                              child: Icon(Icons.add, color: Colors.orange, size: 18),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 8,),
+                  Container(
+                    width: 140,
+                    height: 170,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFF1EFF6),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Icon(Icons.favorite_border, color: Colors.orange, size: 24),
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            "Images/dish3.png", // Change to second product image
+                            height: 80,
+                            width: 80,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "melon fruit salad",
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black),
+                        ),
+                        SizedBox(height: 8),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "₦ 10,000",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.orange,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(4),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.orange.withOpacity(0.2),
+                              ),
+                              child: Icon(Icons.add, color: Colors.orange, size: 18),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
