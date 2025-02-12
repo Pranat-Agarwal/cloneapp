@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cloneapp/page/home_page.dart';
 
 class AuthenticationPage extends StatefulWidget {
   const AuthenticationPage({super.key});
@@ -84,7 +85,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                     height: 56, // Set button height
                     child: ElevatedButton(
                       onPressed: () {
-                        // Add button action here
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFFFFA451), // Matches theme
