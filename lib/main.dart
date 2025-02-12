@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'page/splash_page.dart';
-import 'page/welcome_page.dart';
-import 'page/authentication_page.dart';
-import 'page/home_page.dart';
+
 
 void main() {
   runApp(MyApp());
